@@ -32,14 +32,19 @@ video.addEventListener("playing", () => {
       .withAgeAndGender();
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
 
+    console.log(detections[0].expressions);
+
     canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 
     faceapi.draw.drawDetections(canvas, resizedDetections);
+    console
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
 
     const age = resizedDetections[0].age;
     const interpolatedAge = interpolateAgePredictions(age);
+    document.getElementById("det-age").textContent = `${faceapi.utils.round(interpolatedAge, 0)} years`;
+
     const bottomRight = {
       x: resizedDetections[0].detection.box.bottomRight.x - 50,
       y: resizedDetections[0].detection.box.bottomRight.y
