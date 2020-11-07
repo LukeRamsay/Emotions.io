@@ -43,10 +43,18 @@
                 <h2 class="heading" style="margin-top: 10px; margin-bottom: 0;">Results</h2>
                 <h5 class="body-text">Click the button at the bottom of this block to generate your results and some acompanying recomendations</h5>
                 <h3 class="body-text">Detected Emotion:</h3>
-                <h3 id="det-emotion">Angry</h3>
+                <h3 class="dets" id="det-emotion">Angry</h3>
                 <h3 class="body-text">Detected Age:</h3>
-                <h3 id="det-age">Test</h3>
-                <div id="get-details" class="button button2" onclick="checkOutcome(); checkOutcomeM()"> Generate Results</div>
+                <h3 class="dets" id="det-age">Test</h3>
+                <div id="get-details" class="button button2" onclick="checkOutcome(); checkOutcomeM();"> Generate Results</div>
+                <form id="form" action="#">
+                    <p><input style="display: none;" type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+                    <p><input type="submit" value="Search" class="form-control btn btn-primary w100" onclick="setSearch();" ></p>
+                </form>
+                <form id="Mform" action="#">
+                    <p><input style="display: none;" type="text" id="Msearch" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+                    <p><input type="submit" value="Search" class="form-control btn btn-primary w100" onclick="setSearch()" ></p>
+                </form>
             </div>
         </div>
         <div id="recomend-con">
@@ -63,17 +71,10 @@
                 
             </div>
             <div style="display: none;" class="card" id="emotion-con">
-                
+                <div id="emo-img"></div>
+                <p>Text about the emotion</p>
+                <div class="button">Learn More</div>
             </div>
-            <form id="form" action="#">
-                <p><input style="display: none;" type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
-                <p><input type="submit" value="Search" class="form-control btn btn-primary w100" onclick="setSearch();" ></p>
-            </form>
-            <form id="Mform" action="#">
-                <p><input style="display: none;" type="text" id="Msearch" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
-                <p><input type="submit" value="Search" class="form-control btn btn-primary w100" onclick="setSearch()" ></p>
-            </form>
-
         </div>
 
         <div id="footer-con">

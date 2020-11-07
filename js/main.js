@@ -114,21 +114,22 @@ function checkOutcome(){
   } else if(document.getElementById("det-emotion").textContent == "Surprised"){
     document.getElementById("search").value = randomSurprised;
   }
+
 };
 
 function checkOutcomeM(){
 
-  var happyArrayM = ["Bob Marley music", "Meme compilation", "Bill nye compilation", "Cute animals", "Humans are amazing"];
+  var happyArrayM = ["Bob Marley music", "Queen music", "The Strokes music", "TOTO music", "Lil uzi vert music"];
 
-  var sadArrayM = ["aries music", "nf music", "Lil peep music", "Elliot smith music", "nothing nowhere music"];
+  var sadArrayM = ["aries music", "nf music", "Juice wrld music", "Elliot smith music", "nothing nowhere music"];
 
-  var angryArrayM = ["Blink 182 music", "Rage against the machine music", "Imortal technique music", "Slipknot music", "Ministry music"];
+  var angryArrayM = ["Blink 182 music", "Rage against the machine music", "Imortal technique music", "Slipknot music", "Rise Against music"];
 
-  var surprisedArrayM = ["Humans are amazing", "Dude perfect", "Mr Beast", "Gamers are awesome", "Easter Egg compilations"];
+  var surprisedArrayM = ["Death grips music", "Adele music", "Lil Yachty music", "Luther vandross music", "Megadeath music"];
 
-  var disgustedArrayM = ["Odly Satisfying", "relaxing videos", "clear your mind", "cleaning tips", "Satisfying"];
+  var disgustedArrayM = ["lofi music", "calming noises", "Duke ellignton music", "Sammy Davis Jr music", "Bob cosby music"];
 
-  var fearfulArrayM = ["Stress Relief", "Anxiety Relief", "Rain Sounds", "Yoga", "Calming exercises"];
+  var fearfulArrayM = ["lofi music", "elijah who music", "Frank sinatra music", "Ella fitsgerald music", "The ink spots music"];
 
   var randomNumber = Math.floor(Math.random() * 5);
 
@@ -151,8 +152,19 @@ function checkOutcomeM(){
     document.getElementById("Msearch").value = randomAngryM;
   } else if(document.getElementById("det-emotion").textContent == "Surprised"){
     document.getElementById("Msearch").value = randomSurprisedM;
-  }
+  } 
 
+};
+
+function submitForms(){
+  document.getElementById("form").submit();
+  document.getElementById("form").addEventListener("submit", function(event){
+    event.preventDefault()
+  });
+  document.getElementById("Mform").submit();
+  document.getElementById("Mform").addEventListener("submit", function(event){
+    event.preventDefault()
+  });
 };
 
 function checkOutcomeE(){
