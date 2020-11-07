@@ -167,27 +167,6 @@ function submitForms(){
   });
 };
 
-function checkOutcomeE(){
-
-  const months = ["January", "February", "March", "April", "May", "June", "July"];
-
-  const random = Math.floor(Math.random() * months.length);
-
-  if(document.getElementById("det-emotion").textContent == "Happy"){
-    console.log(random, months[random]);
-  } else if(document.getElementById("det-emotion").textContent == "Sad"){
-    console.log(randomSad);
-  } else if(document.getElementById("det-emotion").textContent == "Fearful"){
-    console.log(randomFearful);
-  } else if(document.getElementById("det-emotion").textContent == "Disgusted"){
-    console.log(randomDisgusted);
-  } else if(document.getElementById("det-emotion").textContent == "Angry"){
-    console.log(randomAngry);
-  } else if(document.getElementById("det-emotion").textContent == "Surprised"){
-    console.log(randomSurprised);
-  }
-};
-
 
 
 

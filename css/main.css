@@ -77,6 +77,54 @@ body{
     background-color: #f5f5f5;
 }
 
+#emo-img{
+    width: 80%;
+    height: 300px;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+.hide{
+
+ display: none;
+ 
+}
+
+.hap-img{
+
+    background-image: url(../resources/shy.png);
+
+}
+
+.sad-img{
+
+    background-image: url(../resources/cry.png);
+
+}
+.ang-img{
+
+    background-image: url(../resources/rage.png);
+
+}
+.sur-img{
+
+    background-image: url(../resources/smile.png);
+
+}
+.fea-img{
+
+    background-image: url(../resources/anguished.png);
+
+}
+.dis-img{
+
+    background-image: url(../resources/unamused.png);
+
+}
+
 .button2{
     display: inline-block;
     margin-top: 10px;
@@ -291,7 +339,7 @@ canvas{
 
 }
 
-#emotion-con{
+#happy-con{
     width: 25%;
     float: left;
     margin-top: 5vh;
@@ -302,5 +350,111 @@ canvas{
     box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
     -webkit-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
     -moz-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #233863;
+
+
+}
+
+#sad-con{
+    width: 25%;
+    float: left;
+    margin-top: 5vh;
+    background-color: #ffffff;
+    height: 80vh;
+    margin-right: 7.5%;
+    margin-left: 5%;
+    box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #233863;
+
+
+}
+
+#angry-con{
+    width: 25%;
+    float: left;
+    margin-top: 5vh;
+    background-color: #ffffff;
+    height: 80vh;
+    margin-right: 7.5%;
+    margin-left: 5%;
+    box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #233863;
+
+
+}
+
+#surpise-con{
+    width: 25%;
+    float: left;
+    margin-top: 5vh;
+    background-color: #ffffff;
+    height: 80vh;
+    margin-right: 7.5%;
+    margin-left: 5%;
+    box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #233863;
+
+
+}
+
+#fear-con{
+    width: 25%;
+    float: left;
+    margin-top: 5vh;
+    background-color: #ffffff;
+    height: 80vh;
+    margin-right: 7.5%;
+    margin-left: 5%;
+    box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #233863;
+
+
+}
+
+#disgust-con{
+    width: 25%;
+    float: left;
+    margin-top: 5vh;
+    background-color: #ffffff;
+    height: 80vh;
+    margin-right: 7.5%;
+    margin-left: 5%;
+    box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(227,227,227,0.75);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #233863;
+
 
 }

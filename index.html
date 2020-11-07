@@ -6,6 +6,7 @@
     <title>Emotions.io</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/gel3bwe.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div id="main-con">
@@ -20,10 +21,11 @@
             </div>
         </div>
         <div id="landing-con">
-            <div id="image-con">
+            <div id="image-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 
             </div>
-            <div id="text-con">
+
+            <div id="text-con" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h1 class="heading">We Are Here To Help You Learn More About Your Emotions</h1>
                 <h3 class="body-text">Emotional intelligence runs deeper than being able to identify the emotions of others, It also concerns understanding your own emotions and sometimes that can be diffuicult.</h3>
                 <h3 class="body-text">Thats why we are here to help</h3>
@@ -34,16 +36,16 @@
             <div id="title-con">
                 <h1 class="heading heading2">Lets See How You're Feeling</h1>
             </div>
-            <div id="webcam-con">
+            <div id="webcam-con" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <video class="video" id="vide" height="500" width="500" autoplay muted>
 
                 </video>
             </div>
-            <div id="results-con">
+            <div id="results-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h2 class="heading" style="margin-top: 10px; margin-bottom: 0;">Results</h2>
                 <h5 class="body-text">Click the button at the bottom of this block to generate your results and some acompanying recomendations</h5>
                 <h3 class="body-text">Detected Emotion:</h3>
-                <h3 class="dets" id="det-emotion">Angry</h3>
+                <h3 class="dets" id="det-emotion">Happy</h3>
                 <h3 class="body-text">Detected Age:</h3>
                 <h3 class="dets" id="det-age">Test</h3>
                 <div id="get-details" class="button button2" onclick="checkOutcome(); checkOutcomeM();"> Generate Results</div>
@@ -61,19 +63,47 @@
             <div id="title-con">
                 <h1 class="heading heading2">Here Are Some Recomendations</h1> 
             </div>
-            <div class="card" id="yt-con">
+            <div class="card" id="yt-con" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 
             </div>
-            <div class="card" id="music-con">
+            <div class="card" id="music-con" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 
             </div>
-            <div class="card" id="emotion-con">
-                
-            </div>
-            <div style="display: none;" class="card" id="emotion-con">
-                <div id="emo-img"></div>
+            <div class="card" id="happy-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="hap-img" id="emo-img"></div>
+                <h3 class="body-text">Happy</h3>
                 <p>Text about the emotion</p>
-                <div class="button">Learn More</div>
+                <div class="button button2">Learn More</div>
+            </div>
+            <div class="card" id="sad-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="sad-img" id="emo-img"></div>
+                <h3 class="body-text">Sad</h3>
+                <p>Text about the emotion</p>
+                <div class="button button2">Learn More</div>
+            </div>
+            <div class="card" id="angry-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="ang-img" id="emo-img"></div>
+                <h3 class="body-text">Angry</h3>
+                <p>Text about the emotion</p>
+                <div class="button button2">Learn More</div>
+            </div>
+            <div class="card" id="surprise-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="sur-img" id="emo-img"></div>
+                <h3 class="body-text">Surprised</h3>
+                <p>Text about the emotion</p>
+                <div class="button button2">Learn More</div>
+            </div>
+            <div class="card" id="fear-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="fea-img" id="emo-img"></div>
+                <h3 class="body-text">Fearful</h3>
+                <p>Text about the emotion</p>
+                <div class="button button2">Learn More</div>
+            </div>
+            <div class="card" id="disgust-con" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="dis-img" id="emo-img"></div>
+                <h3 class="body-text">Disgusted</h3>
+                <p>Text about the emotion</p>
+                <div class="button button2">Learn More</div>
             </div>
         </div>
 
@@ -86,5 +116,62 @@
     <script src="js/main.js"></script>
     <script src="js/app.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+    $(document).ready(function(){
+      if($("#det-emotion").text() == "Happy"){
+          $("#disgust-con").hide();
+          $("#angry-con").hide();
+          $("#surprise-con").hide();
+          $("#fear-con").hide();
+          $("#sad-con").hide();
+          $("#happy-con").show();
+
+      } else if(("#det-emotion").text() == "Sad"){
+        $("#disgust-con").hide();
+        $("#angry-con").hide();
+        $("#surprise-con").hide();
+        $("#fear-con").hide();
+        $("#happy-con").hide();
+        $("#sad-con").show();
+
+      } else if(("#det-emotion").text() == "Fearful"){
+        $("#disgust-con").hide();
+        $("#angry-con").hide();
+        $("#surprise-con").hide();
+        $("#happy-con").hide();
+        $("#sad-con").hide();
+        $("#fear-con").show();
+
+    } else if(("#det-emotion").text() == "Disgusted"){
+        $("#happy-con").hide();
+          $("#angry-con").hide();
+          $("#surprise-con").hide();
+          $("#fear-con").hide();
+          $("#sad-con").hide();
+          $("#disgust-con").show();
+
+    } else if(("#det-emotion").text() == "Angry"){
+        $("#disgust-con").hide();
+          $("#happy-con").hide();
+          $("#surprise-con").hide();
+          $("#fear-con").hide();
+          $("#sad-con").hide();
+          $("#angry-con").show();
+
+    } else if(("#det-emotion").text() == "Surprised"){
+        $("#disgust-con").hide();
+          $("#angry-con").hide();
+          $("#happy-con").hide();
+          $("#fear-con").hide();
+          $("#sad-con").hide();
+          $("#surprise-con").show();
+
+    };
+});
+    </script>
 </body>
 </html>
