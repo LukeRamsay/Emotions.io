@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotions.io</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gel3bwe.css">
+</head>
+<body>
+    <div id="main-con">
+        <div id="header-con">
+            <div id="logo-con">
+                <h1 style="padding: 0; margin: 0;">EMOTIONS.IO</h1>
+            </div>
+            <div id="links-con">
+                <h3 class="links">Learn More</h3>
+                <h3 class="links">Check My Emotion</h3>
+                
+            </div>
+        </div>
+        <div id="landing-con">
+            <div id="image-con">
+                
+            </div>
+            <div id="text-con">
+                <h1 class="heading">We Are Here To Help You Learn More About Your Emotions</h1>
+                <h3 class="body-text">Emotional intelligence runs deeper than being able to identify the emotions of others, It also concerns understanding your own emotions and sometimes that can be diffuicult.</h3>
+                <h3 class="body-text">Thats why we are here to help</h3>
+                <div class="button">Get Started</div>
+            </div>
+        </div>
+        <div id="cam-con">
+            <div id="title-con">
+                <h1 class="heading heading2">Lets See How You're Feeling</h1>
+            </div>
+            <div id="webcam-con">
+                <video class="video" id="vide" height="500" width="500" autoplay muted>
+
+                </video>
+            </div>
+            <div id="results-con">
+                <h2 class="heading" style="margin-top: 10px; margin-bottom: 0;">Results</h2>
+                <h5 class="body-text">Click the button at the bottom of this block to generate your results and some acompanying recomendations</h5>
+                <h3 class="body-text">Detected Emotion:</h3>
+                <h3 id="det-emotion">Angry</h3>
+                <h3 class="body-text">Detected Age:</h3>
+                <h3 id="det-age">Test</h3>
+                <div id="get-details" class="button button2" onclick="checkOutcome()"> Generate Results</div>
+            </div>
+        </div>
+        <div id="recomend-con">
+            <div id="title-con">
+                <h1 class="heading heading2">Here Are Some Recomendations</h1> 
+            </div>
+            <div class="card" id="yt-con">
+
+            </div>
+            <div class="card" id="music-con">
+                
+            </div>
+            <div class="card" id="emotion-con">
+                
+            </div>
+
+        </div>
+        <div id="footer-con">
+            <h3>Developed by: Luke Ramsay</h3>
+        </div>
+    </div>
+    <script src="js/face-api.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
