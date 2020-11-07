@@ -37,7 +37,6 @@ video.addEventListener("playing", () => {
     canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 
     faceapi.draw.drawDetections(canvas, resizedDetections);
-    console
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
 
@@ -64,75 +63,94 @@ function interpolateAgePredictions(age) {
   return avgPredictedAge;
 };
 
+function Testing(){
+
+  var happyArray = ["Vine Compilations", "Meme compilation", "Bill nye compilation", "Cute animals", "Humans are amazing"];
+
+  var sadArray = ["kittens playing", "puppies playing", "Bob Ross Compilations", "Please Dont be sad", "Cute animals"];
+
+  var randomNumber = Math.floor(Math.random() * 5);
+
+  var randomHappy = happyArray[randomNumber].toString();
+  var randomSad = sadArray[randomNumber].toString();
+
+  document.getElementById("search").value = randomHappy;
+}
 
 function checkOutcome(){
 
   var happyArray = ["Vine Compilations", "Meme compilation", "Bill nye compilation", "Cute animals", "Humans are amazing"];
-  var randomHappy = Math.floor(Math.random()*happyArray.length);
 
   var sadArray = ["kittens playing", "puppies playing", "Bob Ross Compilations", "Please Dont be sad", "Cute animals"];
-  var randomSad = Math.floor(Math.random()*sadArray.length);
 
   var angryArray = ["Yoga", "Breathing Techniques", "Cute animals", "Bob Ross Compilations", "anger controll videos"];
-  var randomAngry = Math.floor(Math.random()*angryArray.length);
 
   var surprisedArray = ["Humans are amazing", "Dude perfect", "Mr Beast", "Gamers are awesome", "Easter Egg compilations"];
-  var randomSurprised = Math.floor(Math.random()*surprisedArray.length);
 
-  var disgustedArray = ["Odly Satisfying", "relaxing videos", "clear your mind"];
-  var randomDisgusted = Math.floor(Math.random()*disgustedArray.length);
+  var disgustedArray = ["Odly Satisfying", "relaxing videos", "clear your mind", "satisfying", "cleaning tips"];
 
   var fearfulArray = ["Stress Relief", "Anxiety Relief", "Rain Sounds", "Yoga", "Calming exercises"];
-  var randomFearful = Math.floor(Math.random()*fearfulArray.length);
+
+  var randomNumber = Math.floor(Math.random() * 5);
+
+  var randomHappy = happyArray[randomNumber].toString();
+  var randomSad = sadArray[randomNumber].toString();
+  var randomAngry = angryArray[randomNumber].toString();
+  var randomSurprised = surprisedArray[randomNumber].toString();
+  var randomDisgusted = disgustedArray[randomNumber].toString();
+  var randomFearful = fearfulArray[randomNumber].toString();
 
 
   if(document.getElementById("det-emotion").textContent == "Happy"){
-    console.log(randomHappy, happyArray[randomHappy]);
+    document.getElementById("search").value = randomHappy;
   } else if(document.getElementById("det-emotion").textContent == "Sad"){
-    console.log(randomSad, sadArray[randomSad]);
+    document.getElementById("search").value = randomSad;
   } else if(document.getElementById("det-emotion").textContent == "Fearful"){
-    console.log(randomFearful, fearfulArray[randomFearful]);
+    document.getElementById("search").value = randomFearful;
   } else if(document.getElementById("det-emotion").textContent == "Disgusted"){
-    console.log(randomDisgusted, disgustedArray[randomDisgusted]);
+    document.getElementById("search").value = randomDisgusted;
   } else if(document.getElementById("det-emotion").textContent == "Angry"){
-    console.log(randomAngry, angryArray[randomAngry]);
+    document.getElementById("search").value = randomAngry;
   } else if(document.getElementById("det-emotion").textContent == "Surprised"){
-    console.log(randomSurprised, surprisedArray[randomSurprised]);
+    document.getElementById("search").value = randomSurprised;
   }
 };
 
 function checkOutcomeM(){
 
-  var happyArrayM = ["Vine Compilations", "Meme compilation", "Bill nye compilation", "Cute animals", "Humans are amazing"];
-  var randomHappyM = Math.floor(Math.random()*happyArrayM.length);
+  var happyArrayM = ["Bob Marley music", "Meme compilation", "Bill nye compilation", "Cute animals", "Humans are amazing"];
 
-  var sadArrayM = ["kittens playing", "puppies playing", "Bob Ross Compilations", "Please Dont be sad", "Cute animals"];
-  var randomSadM = Math.floor(Math.random()*sadArrayM.length);
+  var sadArrayM = ["aries music", "nf music", "Lil peep music", "Elliot smith music", "nothing nowhere music"];
 
-  var angryArrayM = ["Yoga", "Breathing Techniques", "Cute animals", "Bob Ross Compilations", "anger controll videos"];
-  var randomAngryM = Math.floor(Math.random()*angryArrayM.length);
+  var angryArrayM = ["Blink 182 music", "Rage against the machine music", "Imortal technique music", "Slipknot music", "Ministry music"];
 
   var surprisedArrayM = ["Humans are amazing", "Dude perfect", "Mr Beast", "Gamers are awesome", "Easter Egg compilations"];
-  var randomSurprisedM = Math.floor(Math.random()*surprisedArrayM.length);
 
-  var disgustedArrayM = ["Odly Satisfying", "relaxing videos", "clear your mind"];
-  var randomDisgustedM = Math.floor(Math.random()*disgustedArrayM.length);
+  var disgustedArrayM = ["Odly Satisfying", "relaxing videos", "clear your mind", "cleaning tips", "Satisfying"];
 
   var fearfulArrayM = ["Stress Relief", "Anxiety Relief", "Rain Sounds", "Yoga", "Calming exercises"];
-  var randomFearfulM = Math.floor(Math.random()*fearfulArrayM.length);
+
+  var randomNumber = Math.floor(Math.random() * 5);
+
+  var randomHappyM = happyArrayM[randomNumber].toString();
+  var randomSadM = sadArrayM[randomNumber].toString();
+  var randomAngryM = angryArrayM[randomNumber].toString();
+  var randomSurprisedM = surprisedArrayM[randomNumber].toString();
+  var randomDisgustedM = disgustedArrayM[randomNumber].toString();
+  var randomFearfulM = fearfulArrayM[randomNumber].toString();
 
   if(document.getElementById("det-emotion").textContent == "Happy"){
-    console.log(randomHappyM, happyArrayM[randomHappyM]);
+    document.getElementById("Msearch").value = randomHappyM;
   } else if(document.getElementById("det-emotion").textContent == "Sad"){
-    console.log(randomSadM, sadArrayM[randomSadM]);
+    document.getElementById("Msearch").value = randomSadM;
   } else if(document.getElementById("det-emotion").textContent == "Fearful"){
-    console.log(randomFearfulM, fearfulArrayM[randomFearfulM]);
+    document.getElementById("Msearch").value = randomFearfulM;
   } else if(document.getElementById("det-emotion").textContent == "Disgusted"){
-    console.log(randomDisgustedM, disgustedArrayM[randomDisgustedM]);
+    document.getElementById("Msearch").value = randomDisgustedM;
   } else if(document.getElementById("det-emotion").textContent == "Angry"){
-    console.log(randomAngryM, angryArrayM[randomAngryM]);
+    document.getElementById("Msearch").value = randomAngryM;
   } else if(document.getElementById("det-emotion").textContent == "Surprised"){
-    console.log(randomSurprisedM, surprisedArrayM[randomSurprisedM]);
+    document.getElementById("Msearch").value = randomSurprisedM;
   }
 
 };
@@ -157,6 +175,10 @@ function checkOutcomeE(){
     console.log(randomSurprised);
   }
 };
+
+
+
+
 
 
 
