@@ -24,7 +24,7 @@ $(function() {
         var results = response.result;
         $("#yt-con").html("");
         $.each(results.items, function(index, item) {
-          $.get("tpl/item.html", function(data) {
+          $.get("views/item.html", function(data) {
               $("#yt-con").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
           });
         });
@@ -49,7 +49,7 @@ $(function() {
           var results = response.result;
           $("#music-con").html("");
           $.each(results.items, function(index, item) {
-            $.get("tpl/item.html", function(data) {
+            $.get("views/item.html", function(data) {
                 $("#music-con").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });

@@ -31,8 +31,8 @@ video.addEventListener("playing", () => {
       .withFaceExpressions()
       .withAgeAndGender();
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
-
-    console.log(detections[0].expressions);
+    //Trrying to get the identified expression
+    // console.log(detections[0].expressions);
 
     canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 
